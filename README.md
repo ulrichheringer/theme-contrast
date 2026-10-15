@@ -1,9 +1,16 @@
 # theme-contrast
 
-Importe dois conjuntos de tokens em JSON ou propriedades CSS, veja o que mudou e calcule o contraste entre uma cor de texto e um fundo. Inclui os limites AA e AAA da WCAG para texto normal e grande.
+Compare two sets of design tokens and check text and background colors against WCAG AA and AAA contrast thresholds. You can paste tokens or load JSON and CSS files; the comparison runs locally in your browser.
 
-## Executar
+## Run locally
 
-Requer Node.js 20.19 ou superior. Execute **npm install** e depois **npm run dev**. Cole tokens ou carregue arquivos JSON/CSS. **npm test** roda os testes de parsing e contraste; **npm run build** gera dist/.
+Requires Node.js 20.19 or later.
 
-São aceitos hex de 3 ou 6 dígitos e rgb()/rgba() opaco. Tokens com transparência e outras expressões CSS são ignorados.
+```sh
+npm install
+npm run dev
+```
+
+Run `npm test` for the parsing and contrast tests, or `npm run build` to create the static app in `dist/`.
+
+The tool reads 3- and 6-digit hex colors and opaque `rgb()`/`rgba()` values. Transparent colors and other CSS expressions are skipped.
